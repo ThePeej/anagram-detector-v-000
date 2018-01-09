@@ -11,7 +11,6 @@ class Anagram
   end
 
   def match(phrase)
-    binding.pry
     phrase.each_with_index do |word,index|
       if word.sort == @word.sort
         @anagrams << phrase[index]
