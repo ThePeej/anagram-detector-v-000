@@ -12,7 +12,7 @@ class Anagram
 
   def match(phrase)
     binding.pry
-    phrase.split(" ").each_with_index do |word,index|
+    phrase.each_with_index do |word,index|
       if word.sort == @word.sort
         @anagrams << phrase[index]
       end
