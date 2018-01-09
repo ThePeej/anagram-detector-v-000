@@ -1,3 +1,5 @@
+require 'pry'
+
 class Anagram
 
   attr_accessor :word
@@ -9,6 +11,7 @@ class Anagram
   end
 
   def match(phrase)
+    binding.pry
     phrase.split(" ").each_with_index do |word,index|
       if word.sort == @word.sort
         @anagrams << phrase[index]
